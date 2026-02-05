@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eine wichtige Frage 💘</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; text-align:center; padding:40px; background:#fff;}
+    .card{max-width:520px;margin:0 auto;padding:28px;border:1px solid #eee;border-radius:18px; box-shadow:0 6px 30px rgba(0,0,0,.06)}
+    h1{margin:0 0 8px}
+    p{color:#444;margin:0 0 18px}
+    button{border:0;border-radius:14px;padding:14px 18px;font-size:18px;cursor:pointer;margin:8px;min-width:160px}
+    .yes{background:#ff4d7d;color:white}
+    .no{background:#f2f2f2}
+    .small{font-size:13px;color:#666;margin-top:18px}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Willst du meine Valentine sein? 💘</h1>
+    <p>Nur ein Klick… und ich weiß Bescheid 😄</p>
+
+    <button class="yes" onclick="answer('ja')">❤️ Ja</button>
+    <button class="no" onclick="answer('nein')">😅 Nein</button>
+
+    <div id="msg" class="small"></div>
+  </div>
+
+  <script>
+    function answer(choice){
+      // Option A: nur Anzeige (einfach)
+      if(choice === 'ja'){
+        document.getElementById('msg').textContent = "😍 JAAA! Das macht mich mega happy!";
+      } else {
+        document.getElementById('msg').textContent = "😢 Okey… ich frag später nochmal 😄";
+      }
+
+      // Option B (optional): Weiterleitung auf extra Seite
+      // window.location.href = choice === 'ja' ? 'ja.html' : 'nein.html';
+
+      // Option C (optional): E-Mail öffnen (du bekommst dann ihre Auswahl als Nachricht-Entwurf)
+      // window.location.href = `mailto:DEINE_EMAIL@DOMAIN.DE?subject=Valentine%20Antwort&body=Meine%20Antwort:%20${choice}`;
+    }
+  </script>
+</body>
+</html>
